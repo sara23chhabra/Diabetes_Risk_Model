@@ -1,0 +1,57 @@
+{
+  "uci_features": [
+    "polyuria",
+    "polydipsia",
+    "sudden_weight_loss",
+    "weakness",
+    "polyphagia",
+    "genital_thrush",
+    "visual_blurring",
+    "itching",
+    "irritability",
+    "delayed_healing",
+    "partial_paresis",
+    "muscle_stiffness",
+    "alopecia",
+    "obesity"
+  ],
+  "brfss_features": [
+    "HighBP",
+    "HighChol",
+    "BMI",
+    "Smoker",
+    "Stroke",
+    "HeartDiseaseorAttack",
+    "PhysActivity",
+    "HvyAlcoholConsump",
+    "MentHlth",
+    "Sex",
+    "Age"
+  ],
+  "brfss_age_map": {
+    "1": "18\u201324",
+    "2": "25\u201329",
+    "3": "30\u201334",
+    "4": "35\u201339",
+    "5": "40\u201344",
+    "6": "45\u201349",
+    "7": "50\u201354",
+    "8": "55\u201359",
+    "9": "60\u201364",
+    "10": "65\u201369",
+    "11": "70\u201374",
+    "12": "75\u201379",
+    "13": "80+"
+  },
+  "decision_threshold": 0.35,
+  "fusion_weights": {
+    "idrs": 0.4,
+    "stage2": 0.35,
+    "stage3": 0.25
+  },
+  "model_info": {
+    "stage2": "XGBoost binary \u2014 BRFSS 2015 CDC (253,680 respondents) \u2014 AUC 0.800",
+    "stage3": "Random Forest \u2014 UCI Early Diabetes (520 patients) \u2014 CV Recall 0.941",
+    "stage1": "IDRS formula \u2014 Mohan et al. 2005 \u2014 validated for Indian population"
+  }
+}
